@@ -280,7 +280,23 @@ section {
   margin-bottom: 2rem;
   margin-top: 2rem;
   overflow: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent; /* For Firefox */
 }
+
+/* For Webkit browsers (Chrome, Safari) */
+.about-containers::-webkit-scrollbar {
+  width: 12px; /* Adjust as needed */
+}
+
+.about-containers::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.about-containers::-webkit-scrollbar-button {
+  display: none;
+}
+
 
 .about-details-container {
   justify-content: center;
