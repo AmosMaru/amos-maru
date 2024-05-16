@@ -1,0 +1,102 @@
+sudo nano /etc/nginx/sites-available/kilush
+
+
+```
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name kilush.com www.kilush.com;
+
+    root /var/www/html/kilush;  # Update the path to your website's root directory
+    index index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # Additional configurations can be added here, such as SSL/TLS settings or PHP handling
+}
+
+```
+
+sudo ln -s /etc/nginx/sites-available/kilush /etc/nginx/sites-enabled/
+
+
+sudo nginx -t
+
+
+sudo systemctl reload nginx
+
+
+div class="title-wrap mb-5" data-aos="fade-up">
+                <h2 class="section-title">
+                    Service offered by <a href="https://kilush.com" target="_blank">kilush.com</a>
+                </h2>
+                <p class="section-sub-title">Discover Kilush.com: Where dreams become products that sell themselves.<br> Experience top-tier solutions crafted to captivate and convert. Let's turn your vision into reality</p>
+            </div>
+            <!-- End of Section Title -->
+            <div class="row">
+                <!-- Features Holder-->
+                <div class="col-md-10 offset-md-1 features-holder">
+                    <div class="row">
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center mt-4">
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <i class="lnr lnr-code fs-40"></i>
+                                </div>
+                                <h4>Web Development</h4>
+                                <p>Create tailored web solutions that fit your unique needs and stand out in functionality.</p>
+                            </div>
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <i class="lnr lnr-rocket fs-40" aria-hidden="true"></i>
+                                </div>
+                                <h4>Scalable Systems </h4>
+                                <p>Build robust and scalable systems that evolve seamlessly with your growing business.</p>
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <i class="fa-light fa-microchip-ai"></i>
+                                    <i class="lnr lnr-bubble fs-40"></i>
+                                </div>
+                                <h4>AI System & Chatbots</h4>
+                                <p>Implement cutting-edge AI solutions and chatbots to automate tasks and enhance user experiences.</p>
+                            </div>
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <i class="lnr lnr-clock fs-40"></i>
+                                </div>
+                                <h4>On Time</h4>
+                                <p>Deliver projects on time without compromising quality, ensuring customer satisfaction.</p>
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center mt-4">
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <i class="fa fa-pie-chart fs-40" aria-hidden="true"></i>
+
+                                    <i class="lnr lnr-pie-chart fs-40"></i>
+                                </div>
+                                <h4>Data Analytics & Machine Learning</h4>
+                                <p>Utilize advanced data analytics and machine learning techniques to gain valuable insights and drive informed decisions.</p>
+                            </div>
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <i class="lnr lnr-graduation-hat fs-40"></i>
+                                </div>
+                                <h4>SASS Specalist</h4>
+                                <p>Work with a team of passionate experts dedicated to bringing your ideas to life with creativity and excellence.</p>
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->
+                    </div>
+                </div>
+                <!-- End of Features Holder-->
